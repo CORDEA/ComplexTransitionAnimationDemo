@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<jp.cordea.complextransitionanimationdemo.AnimatableConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubFragment">
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXStartToEndAnimatableView
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXEndToStartAnimatableView
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view1" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXStartToEndAnimatableView
         android:id="@+id/view3"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view2" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXEndToStartAnimatableView
         android:id="@+id/view4"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view3" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXStartToEndAnimatableView
         android:id="@+id/view5"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -56,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view4" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXEndToStartAnimatableView
         android:id="@+id/view6"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -66,7 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view5" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXStartToEndAnimatableView
         android:id="@+id/view7"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view6" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.TranslationXEndToStartAnimatableView
         android:id="@+id/view8"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -86,7 +86,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view7" />
 
-    <View
+    <jp.cordea.complextransitionanimationdemo.AlphaAnimatableView
         android:id="@+id/foreground"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -96,4 +96,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</jp.cordea.complextransitionanimationdemo.AnimatableConstraintLayout>

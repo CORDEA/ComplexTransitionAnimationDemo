@@ -10,28 +10,28 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-    private var startToEndViews = mutableListOf<TranslationX.StartToEnd>()
-    private var endToStartViews = mutableListOf<TranslationX.EndToStart>()
-    private var alphaViews = mutableListOf<Alpha>()
-    private var scaleViews = mutableListOf<Scale>()
+    private var startToEndViews = mutableListOf<Animatable.TranslationX.StartToEnd>()
+    private var endToStartViews = mutableListOf<Animatable.TranslationX.EndToStart>()
+    private var alphaViews = mutableListOf<Animatable.Alpha.Enter>()
+    private var scaleViews = mutableListOf<Animatable.Scale>()
 
     override fun onViewAdded(view: View?) {
         super.onViewAdded(view)
         when (view) {
-            is TranslationX.StartToEnd -> startToEndViews.add(view)
-            is TranslationX.EndToStart -> endToStartViews.add(view)
-            is Alpha -> alphaViews.add(view)
-            is Scale -> scaleViews.add(view)
+            is Animatable.TranslationX.StartToEnd -> startToEndViews.add(view)
+            is Animatable.TranslationX.EndToStart -> endToStartViews.add(view)
+            is Animatable.Alpha.Enter -> alphaViews.add(view)
+            is Animatable.Scale -> scaleViews.add(view)
         }
     }
 
     override fun onViewRemoved(view: View?) {
         super.onViewRemoved(view)
         when (view) {
-            is TranslationX.StartToEnd -> startToEndViews.remove(view)
-            is TranslationX.EndToStart -> endToStartViews.remove(view)
-            is Alpha -> alphaViews.remove(view)
-            is Scale -> scaleViews.remove(view)
+            is Animatable.TranslationX.StartToEnd -> startToEndViews.remove(view)
+            is Animatable.TranslationX.EndToStart -> endToStartViews.remove(view)
+            is Animatable.Alpha.Enter -> alphaViews.remove(view)
+            is Animatable.Scale -> scaleViews.remove(view)
         }
     }
 
@@ -49,23 +49,5 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
 
     fun setViewScale(scale: Float) {
         scaleViews.forEach { it.update(scale) }
-    }
-
-    interface TranslationX {
-        interface StartToEnd {
-            fun update(translationX: Float)
-        }
-
-        interface EndToStart {
-            fun update(translationX: Float)
-        }
-    }
-
-    interface Alpha {
-        fun update(alpha: Float)
-    }
-
-    interface Scale {
-        fun update(scale: Float)
     }
 }

@@ -8,7 +8,7 @@ class ScaleAnimatableTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : AppCompatTextView(context, attrs, defStyleAttr), AnimatableConstraintLayout.Scale {
+) : AppCompatTextView(context, attrs, defStyleAttr), Animatable.Scale {
     override fun update(scale: Float) {
         scaleX = scale
         scaleY = scale

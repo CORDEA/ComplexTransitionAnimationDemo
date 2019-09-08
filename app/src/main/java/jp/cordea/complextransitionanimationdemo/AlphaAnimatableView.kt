@@ -9,7 +9,7 @@ class AlphaAnimatableView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr), AnimatableConstraintLayout.Alpha {
+) : View(context, attrs, defStyleAttr), Animatable.Alpha.Enter {
     override fun update(alpha: Float) {
         setAlpha(alpha)
     }
@@ -19,7 +19,7 @@ class AlphaAnimatableTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : AppCompatTextView(context, attrs, defStyleAttr), AnimatableConstraintLayout.Alpha {
+) : AppCompatTextView(context, attrs, defStyleAttr), Animatable.Alpha.Enter {
     override fun update(alpha: Float) {
         setAlpha(alpha)
     }

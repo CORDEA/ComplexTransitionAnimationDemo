@@ -11,6 +11,9 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     interface TranslationX {
+        interface StartToEnd
+
+        interface EndToStart
     }
 
     interface Alpha

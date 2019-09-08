@@ -8,9 +8,15 @@ class TranslationXStartToEndAnimatableView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr), Animatable.TranslationX.StartToEnd {
-    override fun update(translationX: Float) {
+) : View(context, attrs, defStyleAttr),
+    Animatable.TranslationX.StartToEnd,
+    Animatable.Alpha.Foreground {
+    override fun updateTranslationX(translationX: Float) {
         setTranslationX(measuredWidth / translationX)
+    }
+
+    override fun updateAlpha(alpha: Float) {
+        setAlpha(alpha)
     }
 }
 
@@ -18,8 +24,14 @@ class TranslationXEndToStartAnimatableView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr), Animatable.TranslationX.EndToStart {
-    override fun update(translationX: Float) {
+) : View(context, attrs, defStyleAttr),
+    Animatable.TranslationX.EndToStart,
+    Animatable.Alpha.Foreground {
+    override fun updateTranslationX(translationX: Float) {
         setTranslationX(-(measuredWidth / translationX))
+    }
+
+    override fun updateAlpha(alpha: Float) {
+        setAlpha(alpha)
     }
 }

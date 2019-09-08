@@ -5,4 +5,10 @@
         android:propertyName="viewScale"
         android:valueFrom="1.0"
         android:valueTo="10.0" />
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="viewAlpha"
+        android:startOffset="500"
+        android:valueFrom="1.0"
+        android:valueTo="0.0" />
 </set>

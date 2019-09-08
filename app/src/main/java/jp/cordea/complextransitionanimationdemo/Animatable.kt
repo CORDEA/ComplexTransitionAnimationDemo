@@ -3,25 +3,25 @@ package jp.cordea.complextransitionanimationdemo
 interface Animatable {
     interface TranslationX {
         interface StartToEnd {
-            fun update(translationX: Float)
+            fun updateTranslationX(translationX: Float)
         }
 
         interface EndToStart {
-            fun update(translationX: Float)
+            fun updateTranslationX(translationX: Float)
         }
     }
 
     interface Alpha {
-        interface Enter {
-            fun update(alpha: Float)
+        interface View {
+            fun updateAlpha(alpha: Float)
         }
 
-        interface Exit {
-            fun update(alpha: Float)
+        interface Foreground {
+            fun updateAlpha(alpha: Float)
         }
     }
 
     interface Scale {
-        fun update(scale: Float)
+        fun updateScale(scale: Float)
     }
 }

@@ -13,6 +13,7 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
     private var startToEndViews = mutableListOf<TranslationX.StartToEnd>()
     private var endToStartViews = mutableListOf<TranslationX.EndToStart>()
     private var alphaViews = mutableListOf<Alpha>()
+    private var scaleViews = mutableListOf<Scale>()
 
     override fun onViewAdded(view: View?) {
         super.onViewAdded(view)
@@ -20,6 +21,7 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
             is TranslationX.StartToEnd -> startToEndViews.add(view)
             is TranslationX.EndToStart -> endToStartViews.add(view)
             is Alpha -> alphaViews.add(view)
+            is Scale -> scaleViews.add(view)
         }
     }
 
@@ -29,6 +31,7 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
             is TranslationX.StartToEnd -> startToEndViews.remove(view)
             is TranslationX.EndToStart -> endToStartViews.remove(view)
             is Alpha -> alphaViews.remove(view)
+            is Scale -> scaleViews.remove(view)
         }
     }
 
@@ -44,6 +47,10 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
         endToStartViews.forEach { it.update(translationX) }
     }
 
+    fun setViewScale(scale: Float) {
+        scaleViews.forEach { it.update(scale) }
+    }
+
     interface TranslationX {
         interface StartToEnd {
             fun update(translationX: Float)
@@ -56,5 +63,9 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
 
     interface Alpha {
         fun update(alpha: Float)
+    }
+
+    interface Scale {
+        fun update(scale: Float)
     }
 }

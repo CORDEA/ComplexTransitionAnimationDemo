@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".SubFragment">
 
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/raleway_extralight"
+        android:text="@string/dummy"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <jp.cordea.complextransitionanimationdemo.TranslationXStartToEndAnimatableView
         android:id="@+id/view1"
         android:layout_width="0dp"

@@ -10,6 +10,7 @@ class TranslationXStartToEndAnimatableView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr), AnimatableConstraintLayout.TranslationX.StartToEnd {
     override fun update(translationX: Float) {
+        setTranslationX(measuredWidth / translationX)
     }
 }
 
@@ -19,5 +20,6 @@ class TranslationXEndToStartAnimatableView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr), AnimatableConstraintLayout.TranslationX.EndToStart {
     override fun update(translationX: Float) {
+        setTranslationX(-(measuredWidth / translationX))
     }
 }

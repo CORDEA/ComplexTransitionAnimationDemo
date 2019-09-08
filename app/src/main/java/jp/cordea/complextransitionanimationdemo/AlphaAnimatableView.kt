@@ -10,5 +10,6 @@ class AlphaAnimatableView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr), AnimatableConstraintLayout.Alpha {
     override fun update(alpha: Float) {
+        setAlpha(alpha)
     }
 }

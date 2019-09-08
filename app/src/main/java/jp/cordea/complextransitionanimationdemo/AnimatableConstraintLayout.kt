@@ -32,6 +32,18 @@ class AnimatableConstraintLayout @JvmOverloads constructor(
         }
     }
 
+    fun setViewAlpha(alpha: Float) {
+        alphaViews.forEach { it.update(alpha) }
+    }
+
+    fun setViewStartToEnd(translationX: Float) {
+        startToEndViews.forEach { it.update(translationX) }
+    }
+
+    fun setViewEndToStart(translationX: Float) {
+        endToStartViews.forEach { it.update(translationX) }
+    }
+
     interface TranslationX {
         interface StartToEnd {
             fun update(translationX: Float)

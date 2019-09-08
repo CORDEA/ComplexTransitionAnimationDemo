@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
+                .setCustomAnimations(R.animator.sub_transition_animation, 0)
                 .replace(
                     R.id.container,
                     if (isMain) {

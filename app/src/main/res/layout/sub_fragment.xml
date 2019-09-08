@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SubFragment">
 
-    <TextView
+    <jp.cordea.complextransitionanimationdemo.ScaleAnimatableTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/raleway_extralight"

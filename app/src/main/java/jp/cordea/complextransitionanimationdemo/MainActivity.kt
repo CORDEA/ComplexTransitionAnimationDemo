@@ -17,9 +17,19 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
         fab.setOnClickListener {
+            val enterAnimation = if (isMain) {
+                R.animator.sub_enter_transition_animation
+            } else {
+                R.animator.main_enter_transition_animation
+            }
+            val exitAnimation = if (isMain) {
+                R.animator.sub_exit_transition_animation
+            } else {
+                R.animator.main_exit_transition_animation
+            }
             supportFragmentManager
                 .beginTransaction()
-                .setCustomAnimations(R.animator.sub_transition_animation, 0)
+                .setCustomAnimations(enterAnimation, exitAnimation)
                 .replace(
                     R.id.container,
                     if (isMain) {

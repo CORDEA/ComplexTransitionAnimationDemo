@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="jp.cordea.complextransitionanimationdemo.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_subFragment"
+            app:destination="@id/subFragment"
+            app:enterAnim="@animator/sub_enter_transition_animation"
+            app:exitAnim="@animator/sub_exit_transition_animation"
+            app:popEnterAnim="@animator/main_enter_transition_animation"
+            app:popExitAnim="@animator/main_exit_transition_animation" />
+    </fragment>
+    <fragment
+        android:id="@+id/subFragment"
+        android:name="jp.cordea.complextransitionanimationdemo.SubFragment"
+        android:label="sub_fragment"
+        tools:layout="@layout/sub_fragment" />
+</navigation>

@@ -9,11 +9,6 @@ import androidx.lifecycle.ViewModelProviders
 
 
 class SubFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = SubFragment()
-    }
-
     private lateinit var viewModel: SubViewModel
 
     override fun onCreateView(
